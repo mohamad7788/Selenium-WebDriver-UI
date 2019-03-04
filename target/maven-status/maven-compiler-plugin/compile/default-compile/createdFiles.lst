@@ -1,0 +1,11 @@
+Main.class
+main\java\com\pageObjects\TargetSearchPage.class
+main\java\com\pageObjects\HomePage.class
+main\java\com\pageObjects\TargetPage.class
+main\java\com\pageObjects\Locations.class
+utilities\WebDriverFactory$1.class
+utilities\WebDriverType.class
+utilities\WebDriverFactory.class
+utilities\WebDrierConfig.class
+main\java\com\pageObjects\ArticelPage.class
+main\java\com\pageObjects\ResultsPage.class
