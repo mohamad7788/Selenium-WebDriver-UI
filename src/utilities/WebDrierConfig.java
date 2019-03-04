@@ -1,23 +1,36 @@
 package utilities;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 public class WebDrierConfig {
 	
-	public static final String CHROME_DRIVER_NAME="webdriver.chrome.driver" ;  
-	public static final String CHROME_DRIVER_PATH="resources\\chromedriver.exe" ;
-	
-	public static final String EDGE_DRIVER_NAME="";  
-	public static final String EDGE_DRIVER_PATH="";
-	
-	public static final String FIREFOX_DRIVER_NAME="";  
-	public static final String FIREFOX_DRIVER_PATH="";
-	
-	public static final String IE_DRIVER_NAME="";  
-	public static final String IE_DRIVER_PATH="";
-	
-	public static final String OPERA_DRIVER_NAME="";  
-	public static final String OPERA_DRIVER_PATH="";
-	
-	public static final String SAFARI_DRIVER_NAME="";  
-	public static final String SAFARI_DRIVER_PATH="";
-	
+	public static  String BROWSER_DRIVER_PROPERTY_NAME="";  
+	public static  String BROWSER_DRIVER_PROPERTY_VALUE="";
+	public static  String BROWSER_DRIVER_NAME="";
+	public static  String SEARCH_ENGINE="";
+	public static  String SEARCH_FOR_PAGE="";
+
+	static {
+		Properties prop = new Properties();
+		FileInputStream input;
+		try {
+			input = new FileInputStream("resources\\config.properties");
+			prop.load(input);
+			BROWSER_DRIVER_PROPERTY_NAME=prop.getProperty("browser_driver_property_name");
+			BROWSER_DRIVER_PROPERTY_VALUE=prop.getProperty("browser_driver_property_value");
+			BROWSER_DRIVER_NAME=prop.getProperty("browser_driver_name");
+			SEARCH_ENGINE=prop.getProperty("search_site");
+			SEARCH_FOR_PAGE=prop.getProperty("search_for_page");
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
