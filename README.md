@@ -21,4 +21,7 @@ In addiotion it include Unit-testing using Junit5.
 
 
 **Project Build**
-Using Maven command line - ```mvn install```
+Using Maven command line for build and compile 
+```
+mvn clean install
+```
