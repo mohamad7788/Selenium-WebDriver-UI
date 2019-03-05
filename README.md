@@ -3,7 +3,7 @@ Java Selenum WebDriver framework testing UI (website)
 This is an sample project to demonstrate how to work with Selenium and internet website pages , and perform varioous checks & validation of webpages .
 In addiotion it include Unit-testing using Junit5.
 
-**_High leveel flow :-_**
+**_High level flow :-_**
 1. Create at list one page-object for the test
 2. Find "ynetnews" ( Israeli news website in English - www.ynetnews.com) in google
 3. Enter the website
@@ -18,3 +18,7 @@ In addiotion it include Unit-testing using Junit5.
 12. Find "updates" section in main  page
 13. Verify the “updates” article list is moving
 14. Verify the “updates” article list is not moving on mouse hover
+
+
+**Project Build**
+Using Maven command line - ```mvn install```
