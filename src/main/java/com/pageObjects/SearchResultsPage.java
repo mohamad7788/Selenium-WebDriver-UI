@@ -23,6 +23,10 @@ public class SearchResultsPage {
     public int getResultsCount(){
         return results.size();
     }
+    
+    public List<WebElement> getSearchResults(){
+        return results;
+    }
 
     public WebsiteTargetPage selectTargetPage(){	
     	results.get(0).click();
@@ -34,6 +38,7 @@ public class SearchResultsPage {
         WebDriverWait wait = new WebDriverWait(webDriver,10);
         wait.until(ExpectedConditions.visibilityOfAllElements(results));
     }
+    
 
 
 }
