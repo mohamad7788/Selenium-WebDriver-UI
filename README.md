@@ -27,5 +27,10 @@ Using Maven command line for build and compile :
 ```
 mvn clean
 mvn compile
-mvn clean install
+mvn clean install -DskipTests
+
+mvn -Dtest=HomePageTest test
+mvn -Dtest=SearchResultsPageTest test
+mvn -Dtest=WebsiteTargetPageTest test
+mvn -Dtest=ArticlePageTest test
 ```
